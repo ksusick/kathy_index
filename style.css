@@ -1,0 +1,162 @@
+/* @font-face {
+    font-family: 'montserrat_alternatesregular';
+    src: url('https://ksusick.github.io/font/montserratalternates-regular-webfont.woff2') format('woff2'),
+         url('https://ksusick.github.io/font/montserratalternates-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+.navbar li {
+/*   font-family: 'montserrat_alternatesregular'; */
+  margin-left : 3rem;
+  margin-right : 3rem;
+}
+
+h1 {
+/*   font-family: 'montserrat_alternatesregular'; */
+  letter-spacing: 6px;
+}
+
+p {
+/*   font-family: 'montserrat_alternatesregular'; */
+  text-align: justify;
+}
+
+footer p {
+/*   font-family: 'montserrat_alternatesregular'; */
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* https://www.a11y-collective.com/blog/skip-to-main-content/ */
+.screen-reader-text {   
+  position: absolute;   /*   Positions the link absolutely on the page allowing it to be placed anywhere. */
+  left: -9999px;        /*   Moves the link far off-screen to the left making it invisible to sighted users. */
+  z-index: 999;         /*   Sets a high z-index ensuring that the link will be on top of other page elements if it becomes visible */
+  padding: 1em;
+  background-color: black;
+  color: white;
+  opacity: 0; 
+}
+
+.screen-reader-text:focus {
+   left: 50%; /*   When the link receives focus it is repositioned horizontally to the centre of the screen */
+   transform: translateX(-50%); /*  This centres the link horizontally by moving it back to the left by 50% of its own width */
+   opacity: 1; 
+}
+
+
+
+/******* SLIDESHOW *********/
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: bottom !important;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 2000px;
+  position: relative;
+  margin: auto;
+  padding: 0;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    transition: .7s ease;
+    text-decoration: none;
+    }
+
+.next {
+  right: 0;
+  border-radius: 8px 0 0 8px;   
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.prev:hover,
+.next:hover {
+    color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.8)
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 100%;
+  text-align: right;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease;
+    position: relative;
+    bottom: 35px;
+    left: 50%;
+}
+
+.active,
+.dot:hover {
+    background-color: #ffffff;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 8s;
+/*   transition: left 0.15s ease-in;
+    -webkit-transition: left 0.15s ease-in; */
+    -webkit-transition: left 0.15s ease-out;
+    transition: left 0.15s ease-out;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* .slide-in {
+  animation-duration: 3s;
+  animation-name: slide-in;
+}
+
+@keyframes slide-in {
+  from {
+    translate: 150vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+} */
